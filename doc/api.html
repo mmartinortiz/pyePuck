@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API &mdash; ePuck.py 1.2.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.2.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ePuck.py 1.2.2 documentation" href="index.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">ePuck.py 1.2.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ePuck">
+<em class="property">class </em><tt class="descname">ePuck</tt><a class="headerlink" href="#ePuck" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The full public class methods are the following:</p>
+<span class="target" id="module-ePuck"></span><dl class="class">
+<dt id="ePuck.ePuck">
+<em class="property">class </em><tt class="descclassname">ePuck.</tt><tt class="descname">ePuck</tt><big>(</big><em>address</em>, <em>debug=False</em><big>)</big><a class="headerlink" href="#ePuck.ePuck" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represent an ePuck object</p>
+<dl class="method">
+<dt id="ePuck.ePuck.calibrate_proximity_sensors">
+<tt class="descname">calibrate_proximity_sensors</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.calibrate_proximity_sensors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calibrate proximity sensors, keep off any object in 10 cm</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Successful operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.close">
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the connection with the robot. Same as &#8216;disconnect()&#8217;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">0 if all ok</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises Exception:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">if it was a problem closing the connection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.connect">
+<tt class="descname">connect</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect with the physic ePuck robot</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">If the connexion was succesful</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises Exception:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If there are a communication proble, for example, the robot is off</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.disable">
+<tt class="descname">disable</tt><big>(</big><em>*sensors</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sensor(s) that you want to get disable in the ePuck</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sensors</strong> (<em>String</em>) &#8211; Name of the sensors, take a look to DIC_SENSORS. Multiple sensors can be separated by commas</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sensors enabled</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises Exception:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Some wrong happened</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.disconnect">
+<tt class="descname">disconnect</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect from ePuck robot. Same as &#8216;close()&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.enable">
+<tt class="descname">enable</tt><big>(</big><em>*sensors</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sensor(s) that you want to get enable in the ePuck</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sensors</strong> (<em>String</em>) &#8211; Name of the sensors, take a look to DIC_SENSORS. Multiple sensors can be separated by commas</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Sensors enabled</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises Exception:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Some wrong happened</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_accelerometer">
+<tt class="descname">get_accelerometer</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_accelerometer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Accelerometer values in (x, y, z)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Accelerometer values</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_camera_parameters">
+<tt class="descname">get_camera_parameters</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_camera_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the camera parameters as a tuple
+(mode, width, height, zoom)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Camera parameters</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_floor_sensors">
+<tt class="descname">get_floor_sensors</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_floor_sensors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the floor sensors values as (left, center, right)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Floor sensors values</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_image">
+<tt class="descname">get_image</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the last image captured from the ePuck&#8217;s camera (after a &#8216;step()&#8217;). 
+None if there are not images captured. The image is an PIL object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Image from robot&#8217;s camera</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">PIL</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_light_sensor">
+<tt class="descname">get_light_sensor</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_light_sensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value of the light sensor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Ligth sensor value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_microphone">
+<tt class="descname">get_microphone</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_microphone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the volume of the three microphones</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Microphones values</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_motor_position">
+<tt class="descname">get_motor_position</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_motor_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the position of the left and right motor as a tuple</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Motor position</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_motor_speed">
+<tt class="descname">get_motor_speed</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_motor_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the motor speed. Correct values are in the range [-1000, 1000]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Motor speed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_proximity">
+<tt class="descname">get_proximity</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_proximity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the values of the 8 proximity sensors</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Proximity sensors values</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_selector">
+<tt class="descname">get_selector</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the selector position (0-15)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Selector value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_sensors_enabled">
+<tt class="descname">get_sensors_enabled</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_sensors_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return a list of sensors thar are active</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.get_sercom_version">
+<tt class="descname">get_sercom_version</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.get_sercom_version" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Return the ePuck&#8217;s firmware version</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.is_connected">
+<tt class="descname">is_connected</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.is_connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a boolean value that indicate if the robot is connected to the PC</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">If the robot is connected to the PC</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.reset">
+<tt class="descname">reset</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the robot</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Successful operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises Exception:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">If there is not connection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.save_image">
+<tt class="descname">save_image</tt><big>(</big><em>name='ePuck.jpg'</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save image from ePuck&#8217;s camera to disk</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>String</em>) &#8211; Image name, ePuck.jpg as default</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Operation result</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.send_and_receive">
+<tt class="descname">send_and_receive</tt><big>(</big><em>msg</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.send_and_receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an Ascii message to the robot and return the reply. You can
+use it, but I don&#8217;t recommend, use &#8216;enable()&#8217;, &#8216;disable()&#8217;
+and &#8216;step()&#8217; instead</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>String</em>) &#8211; The message you want to send</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Response of the robot</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_accelerometer_filtered">
+<tt class="descname">set_accelerometer_filtered</tt><big>(</big><em>filter=False</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_accelerometer_filtered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set filtered way for accelerometer, False is default value
+at the robot start</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filter</strong> (<em>Boolean</em>) &#8211; True or False, as you want</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_body_led">
+<tt class="descname">set_body_led</tt><big>(</big><em>led_value</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_body_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on /off the body led</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>led_value</strong> (<em>int</em>) &#8211; <ul class="simple">
+<li>0 : Off</li>
+<li>1 : On (green)</li>
+<li>2 : Inverse</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_camera_parameters">
+<tt class="descname">set_camera_parameters</tt><big>(</big><em>mode</em>, <em>width</em>, <em>height</em>, <em>zoom</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_camera_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the camera parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mode</strong> (<em>String</em>) &#8211; GREY_SCALE, LINEAR_CAM, RGB_365, YUM</li>
+<li><strong>width</strong> (<em>int</em>) &#8211; Width of the camera</li>
+<li><strong>height</strong> (<em>int</em>) &#8211; Height of the camera</li>
+<li><strong>zoom</strong> (<em>int</em>) &#8211; 1, 4, 8</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_debug">
+<tt class="descname">set_debug</tt><big>(</big><em>debug</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set / unset debug information
+:param debug: True or False, as you want or not Debug information
+:type debug: Boolean</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_front_led">
+<tt class="descname">set_front_led</tt><big>(</big><em>led_value</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_front_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on /off the front led</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>led_value</strong> (<em>int</em>) &#8211; <ul class="simple">
+<li>0 : Off</li>
+<li>1 : On (green)</li>
+<li>2 : Inverse</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_led">
+<tt class="descname">set_led</tt><big>(</big><em>led_number</em>, <em>led_value</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on/off the leds</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>led_number</strong> (<em>int</em>) &#8211; If led_number is other than 0-7, all leds are set to the indicated value.</li>
+<li><strong>led_value</strong> (<em>int</em>) &#8211; <ul>
+<li>0 : Off</li>
+<li>1 : On (Red)</li>
+<li>2 : Inverse</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_motor_position">
+<tt class="descname">set_motor_position</tt><big>(</big><em>l_wheel</em>, <em>r_wheel</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_motor_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the motor position, useful for odometry</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>l_wheel</strong> (<em>int</em>) &#8211; left wheel</li>
+<li><strong>r_wheel</strong> (<em>int</em>) &#8211; right wheel</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_motors_speed">
+<tt class="descname">set_motors_speed</tt><big>(</big><em>l_motor</em>, <em>r_motor</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_motors_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the motors speed. The MAX and MIN speed of the ePcuk is [-1000, 1000]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>l_motor</strong> (<em>int</em>) &#8211; Speed of left motor</li>
+<li><strong>r_motor</strong> (<em>int</em>) &#8211; Speed of right motor</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.set_sound">
+<tt class="descname">set_sound</tt><big>(</big><em>sound</em><big>)</big><a class="headerlink" href="#ePuck.ePuck.set_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reproduce a sound</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sound</strong> (<em>int</em>) &#8211; Sound in the range [1,5]. Other for stop</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.step">
+<tt class="descname">step</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to update the sensor readings and to reflect changes in 
+the actuators. Before invoking this method is not guaranteed
+the consistency of the sensors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ePuck.ePuck.stop">
+<tt class="descname">stop</tt><big>(</big><big>)</big><a class="headerlink" href="#ePuck.ePuck.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the motor and turn off all leds
+:return: Successful operation
+:rtype: Boolean
+:raise Exception: If there is not connection</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Examples</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >previous</a> |</li>
+        <li><a href="index.html">ePuck.py 1.2.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Manuel Martín Ortiz.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
