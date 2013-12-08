@@ -1,3 +1,8 @@
+pyePuck
+=======
+
+pyePuck is a python library to control remotely the ePuck robot
+
 -- ePuck.py --
 
 The aim of this library is to provide access to the ePuck robots
