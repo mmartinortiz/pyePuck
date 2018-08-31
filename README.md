@@ -1,9 +1,6 @@
-pyePuck
-=======
+# pyePuck
 
 pyePuck is a python library to control remotely the ePuck robot
-
--- ePuck.py --
 
 The aim of this library is to provide access to the ePuck robots
 through a bluetooth connection. Thus, you can write a program that 
@@ -17,8 +14,8 @@ This library is written in Python 2.6, and you can import it from
 any program written in Python  (same version or later). In addition 
 to this, you will also need two extra libraries:
 
-	-> Python Bluetooth or Pybluez
-	-> Python Image Library (PIL)
+- Python Bluetooth or Pybluez
+- Python Image Library (PIL)
 
 In this package you will find some examples of how to use this library.
 
@@ -32,4 +29,6 @@ So remember, you are processing in your computer, not on the ePuck,
 and you need to take the sensors data and write on the actuators 
 values on the ePuck
 
-For further information and updates visit http://abitworld.com/projects
+For further information and updates visit [the project wepage](https://blog.martinortiz.eu/projects/epuck-robot-libraries-for-teleoperation/)
+
+**Note**: This library was design for Python 2. A lot of things have changed shince I started this development, and I do not have access to an ePuck anymore. 
